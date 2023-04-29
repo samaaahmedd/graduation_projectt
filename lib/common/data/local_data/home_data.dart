@@ -9,10 +9,10 @@ const Map<String, dynamic> apiHomeLocalData = {
       "image":
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQNUcfG_02ZSdTBJ7zEXxrIDtOoIdL5ncAIA&usqp=CAU",
       "name": "Eng / Sama",
-      "rate": 4,
+      "rate": 5,
       "address": "Egypt / Cairo / St.255",
-      "price": 90.50,
-      "age": 26,
+      "price": 1990.50,
+      "age": 25,
       "language": Languages.Indian,
       "gender": Gender.Female,
       "country": Country.Egypt,
@@ -21,7 +21,7 @@ const Map<String, dynamic> apiHomeLocalData = {
     {
       "image":
           "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "name": "Mohamed Ahmed",
+      "name": "Saif Mohsen",
       "rate": 2,
       "address": "Egypt / Giza / St.255",
       "price": 300,
@@ -34,7 +34,7 @@ const Map<String, dynamic> apiHomeLocalData = {
     {
       "image":
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLLkdJph4fcGrcHobU_E0NRxA600mzn-2hnw&usqp=CAU",
-      "name": "Ali El Sayed",
+      "name": "Abdelrahman Moahmed",
       "rate": 5,
       "address": "Saudi Arabia / Gada / St.123",
       "price": 1000,
@@ -59,21 +59,8 @@ const Map<String, dynamic> apiHomeLocalData = {
     },
     {
       "image":
-          "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "name": "Mohamed Ahmed",
-      "rate": 2,
-      "address": "Egypt / Giza / St.255",
-      "price": 300,
-      "age": 26,
-      "language": Languages.Arabic,
-      "gender": Gender.Female,
-      "country": Country.Egypt,
-      "userType":UserType.Tour_Guide,
-    },
-    {
-      "image":
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLLkdJph4fcGrcHobU_E0NRxA600mzn-2hnw&usqp=CAU",
-      "name": "Omer Abdo",
+      "name": "ahmed ibrahem",
       "rate": 1,
       "address": "Saudi Arabia / Gada / St.123",
       "price": 456,
@@ -86,7 +73,7 @@ const Map<String, dynamic> apiHomeLocalData = {
     {
       "image":
           "https://www.bentbusinessmarketing.com/wp-content/uploads/2013/02/35844588650_3ebd4096b1_b-1024x683.jpg",
-      "name": "Youssef Samir",
+      "name": "salma ahmed",
       "rate": 2,
       "address": "Egypt / Cairo / St.255",
       "price": 789,
@@ -112,7 +99,7 @@ const Map<String, dynamic> apiHomeLocalData = {
     {
       "image":
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLLkdJph4fcGrcHobU_E0NRxA600mzn-2hnw&usqp=CAU",
-      "name": "Wehba",
+      "name": "Mohamed",
       "rate": 3,
       "address": "Saudi Arabia / Gada / St.123",
       "price": 258,
@@ -125,7 +112,7 @@ const Map<String, dynamic> apiHomeLocalData = {
     {
       "image":
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9dcJbhAFcJIWpYRVvIXpARwI_c8tlisnI7A&usqp=CAU",
-      "name": "Maha Mohamed",
+      "name": "Sahar Ahmed",
       "rate": 5,
       "address": "Egypt / Cairo / St.255",
       "price": 753,
@@ -138,7 +125,7 @@ const Map<String, dynamic> apiHomeLocalData = {
     {
       "image":
           "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "name": "Soha Samir",
+      "name": "ayman",
       "rate": 4,
       "address": "Egypt / Giza / St.255",
       "price": 951,
@@ -147,18 +134,6 @@ const Map<String, dynamic> apiHomeLocalData = {
       "gender": Gender.Female,
       "country": Country.Egypt,
       "userType":UserType.Tour_Guide,
-    },
-    {
-      "image": "https://pbs.twimg.com/media/ErOnWaMXUAI2uMg.jpg",
-      "name": "Adel Shakel",
-      "rate": 5,
-      "address": "Egypt / Elesmilya / El hank manta",
-      "price": 1000000,
-      "age": 26,
-      "language": Languages.France,
-      "gender": Gender.Female,
-      "country": Country.Egypt,
-      "userType":UserType.Photographer,
     },
     {
       "image": "https://www.mnp.ca/-/media/foundation/integrations/personnel/2020/12/16/13/57/personnel-image-4483.jpg?h=800&w=600&hash=9D5E5FCBEE00EB562DCD8AC8FDA8433D",
@@ -173,7 +148,7 @@ const Map<String, dynamic> apiHomeLocalData = {
       "userType":UserType.Tourist,
     },{
       "image": "https://www.mnp.ca/-/media/foundation/integrations/personnel/2020/12/16/13/57/personnel-image-4483.jpg?h=800&w=600&hash=9D5E5FCBEE00EB562DCD8AC8FDA8433D",
-      "name": "Moamen ",
+      "name": "Moamen Mohamed ",
       "rate": 5,
       "address": "Egypt / Mansoura / El hank manta",
       "price": 1000000,
