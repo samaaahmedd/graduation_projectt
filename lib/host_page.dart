@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:with_me/common/utils/app_style/app_colors/app_colors.dart';
 import 'package:with_me/home_page/ui/home_page.dart';
 import 'package:with_me/messages_page/messages_page.dart';
 
@@ -23,7 +22,7 @@ class _HostPageState extends State<HostPage> {
       bottomNavigationBar: BottomNavigationBar(
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        selectedIconTheme: IconThemeData(color: AppColors.backgroundColor),
+        selectedIconTheme: const IconThemeData(color: Color(0xff3843d9)),
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),

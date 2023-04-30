@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:with_me/common/utils/app_style/app_colors/app_colors.dart';
 
 class CustomDropdownButton extends StatelessWidget {
   final List<Enum> enumList;
@@ -34,7 +33,7 @@ class CustomDropdownButton extends StatelessWidget {
             elevation: 16,
             borderRadius: BorderRadius.circular(12),
             isExpanded: true,
-            style: TextStyle(color: AppColors.backgroundColor),
+            style: const TextStyle(color: Color(0xff3843d9)),
             onChanged: onChanged,
             hint:  Text("Select $label"),
             underline: const SizedBox(),

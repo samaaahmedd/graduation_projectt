@@ -1,8 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:with_me/common/domain/use_cases/get_login_status.dart';
-import 'package:with_me/common/utils/app_images_paths/app_images_paths.dart';
-import 'package:with_me/common/utils/app_style/app_colors/app_colors.dart';
 import 'package:with_me/host_page.dart';
 import 'package:with_me/welcome_page/welcome_page.dart';
 
@@ -31,10 +29,9 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.backgroundColor,
+      backgroundColor: const Color(0xff3843d9),
       body: Center(
-          child: Image.asset(
-        AppImagesPaths.splashSecondLogo,
+          child: Image.asset("assets/app_logo.png",
         scale: 1.2,
         isAntiAlias: true,
       )),

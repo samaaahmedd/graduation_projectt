@@ -1,5 +1,5 @@
 import 'package:with_me/home_page/domain/models/home_model.dart';
-import 'package:with_me/home_page/ui/widgets/sort_dialog.dart';
+import 'package:with_me/home_page/ui/sort_dialog.dart';
 
 class SortLogic {
   List<HomeModel> sortData(List<HomeModel> unSortData, SortEnum sortValue) {

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:with_me/common/utils/app_images_paths/app_images_paths.dart';
 import 'package:with_me/log_in_page/log_in_page.dart';
 import 'package:with_me/register_page/check_register_type_page.dart';
-import '../common/utils/app_style/app_colors/app_colors.dart';
+
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -19,33 +18,29 @@ class _WelcomePageState extends State<WelcomePage> {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 80),
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage(AppImagesPaths.walkThrowBg),
+                image: AssetImage("assets/walk_throw_bg.png"),
                 fit: BoxFit.cover)),
-        child: SafeArea(
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Let\'s Go',
-                  style: TextStyle(color: AppColors.forthColor, fontSize: 55),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Text(
-                  'WithYou  every where',
-                  style: TextStyle(color: AppColors.forthColor, fontSize: 20),
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * .45,
-                ),
-                _logInOrRegisterWidget(),
-              ],
-            ),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const Text(
+                'Let\'s Go',
+                style: TextStyle(color: Colors.white, fontSize: 55),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              const Text(
+                'WithYou  every where',
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * .45,
+              ),
+              _logInOrRegisterWidget(),
+            ],
           ),
         ),
       ),
@@ -67,7 +62,7 @@ class _WelcomePageState extends State<WelcomePage> {
               child: Container(
                   alignment: Alignment.center,
                   padding: const EdgeInsets.symmetric(vertical: 20),
-                  color: AppColors.forthColor,
+                  color: Colors.white,
                   child: const Text(
                     'Log In',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -79,13 +74,13 @@ class _WelcomePageState extends State<WelcomePage> {
               child: Container(
                   alignment: Alignment.center,
                   padding: const EdgeInsets.symmetric(vertical: 20),
-                  color: AppColors.secondBackgroundColor,
-                  child: Text(
+                  color: Color(0xff5661f1),
+                  child: const Text(
                     'Register',
                     style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        color: AppColors.forthColor),
+                        color: Colors.white),
                   )),
             )),
           ]),

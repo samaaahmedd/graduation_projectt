@@ -3,7 +3,6 @@ import 'package:with_me/common/custom_widgets/custom_button.dart';
 import 'package:with_me/common/custom_widgets/multi_select_drop_down_menu.dart';
 import 'package:with_me/common/custom_widgets/text_form_field.dart';
 import 'package:with_me/common/domain/use_cases/set_login_usecase.dart';
-import 'package:with_me/common/utils/app_style/app_colors/app_colors.dart';
 import 'package:with_me/filter/models/country.dart';
 import 'package:with_me/filter/models/languages.dart';
 import 'package:with_me/filter/models/user_type.dart';
@@ -34,7 +33,7 @@ class _CompleteRegisterPageState extends State<CompleteRegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.secondBackgroundColor,
+      backgroundColor: const Color(0xff5661f1),
       body: SafeArea(
         child: Form(
           key: _formKey,
@@ -134,7 +133,8 @@ class _CompleteRegisterPageState extends State<CompleteRegisterPage> {
                   ),
                   widget.userType == UserType.Tourist
                       ? const SizedBox()
-                      : Column(
+                      : Column(crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             const Text(
                               "Experience",

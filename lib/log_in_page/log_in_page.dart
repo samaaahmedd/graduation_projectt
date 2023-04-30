@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:with_me/common/custom_widgets/custom_button.dart';
 import 'package:with_me/common/custom_widgets/text_form_field.dart';
 import 'package:with_me/common/domain/use_cases/set_login_usecase.dart';
-import 'package:with_me/common/utils/app_style/app_colors/app_colors.dart';
 import 'package:with_me/host_page.dart';
 import 'package:with_me/register_page/check_register_type_page.dart';
 
@@ -23,7 +22,7 @@ class _LogInPageState extends State<LogInPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.secondBackgroundColor,
+      backgroundColor: const Color(0xff5661f1),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,

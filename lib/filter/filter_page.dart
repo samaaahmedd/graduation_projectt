@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:with_me/common/custom_widgets/custom_button.dart';
-import 'package:with_me/common/utils/app_style/app_colors/app_colors.dart';
 import 'package:with_me/filter/models/country.dart';
 import 'package:with_me/filter/models/gender.dart';
 import 'package:with_me/filter/models/languages.dart';
@@ -34,7 +33,7 @@ class _FilterPageState extends State<FilterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.secondBackgroundColor,
+      backgroundColor: const Color(0xff5661f1),
       appBar: AppBar(
           actions: [
             IconButton(
@@ -103,7 +102,7 @@ class _FilterPageState extends State<FilterPage> {
       ),
       bottomNavigationBar: Container(
         padding: const EdgeInsets.symmetric(horizontal: 25),
-        color: AppColors.backgroundColor,
+        color: const Color(0xff3843d9),
         width: MediaQuery.of(context).size.width,
         child: Row(children: [
           Expanded(

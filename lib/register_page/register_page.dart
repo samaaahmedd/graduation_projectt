@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:with_me/common/custom_widgets/custom_button.dart';
 import 'package:with_me/common/custom_widgets/text_form_field.dart';
-import 'package:with_me/common/utils/app_style/app_colors/app_colors.dart';
 import 'package:with_me/filter/models/user_type.dart';
 import 'complete_register_page.dart';
 
@@ -23,7 +22,7 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.secondBackgroundColor,
+      backgroundColor: Color(0xff5661f1),
       body: SafeArea(
         child: Form(
           key: _formKey,

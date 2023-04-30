@@ -4,14 +4,13 @@ import 'package:with_me/common/custom_widgets/rating_bar.dart';
 import 'package:with_me/common/data/local_data/home_data.dart';
 import 'package:with_me/common/data/mapper/map_api_home_to_home.dart';
 import 'package:with_me/common/data/models/api_home_model.dart';
-import 'package:with_me/common/utils/app_style/app_colors/app_colors.dart';
 import 'package:with_me/filter/filter_page.dart';
 import 'package:with_me/home_page/domain/models/home_model.dart';
-import 'package:with_me/home_page/ui/widgets/sort_dialog.dart';
-import 'package:with_me/home_page/utils/filter_logic.dart';
-import 'package:with_me/home_page/utils/sort.dart';
+import 'package:with_me/home_page/ui/sort_dialog.dart';
+import 'package:with_me/home_page/ui/filter_logic.dart';
+import 'package:with_me/home_page/ui/sort.dart';
 import 'package:with_me/notification_page/notification_page.dart';
-import 'widgets/search_widget.dart';
+import 'search_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -29,7 +28,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.secondBackgroundColor,
+      backgroundColor: const Color(0xff5661f1),
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: Column(
@@ -90,17 +89,17 @@ class _HomePageState extends State<HomePage> {
           Expanded(
             child: FutureBuilder(
               future: _getHomeData(),
-              builder: (context, snapshot) {
+              builder: (context, userData) {
                 return ListView.builder(
-                  itemCount: snapshot.data?.length,
+                  itemCount: userData.data?.length,
                   itemBuilder: (context, index) {
-                    final HomeModel? item = snapshot.data?[index];
+                    final HomeModel? item = userData.data?[index];
                     return Container(
                       margin: const EdgeInsets.symmetric(
                           horizontal: 20, vertical: 8),
                       padding: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
-                          color: AppColors.forthColor,
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(12)),
                       child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
