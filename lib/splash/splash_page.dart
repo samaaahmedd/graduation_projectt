@@ -21,7 +21,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     _checkIfLogIn();
-    Timer(const Duration(seconds: 10),
+    Timer(const Duration(seconds: 3),
         () => _navigateToHomePage());
     super.initState();
   }
