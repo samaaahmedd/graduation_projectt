@@ -1,4 +1,4 @@
-import 'package:with_me/home_page/domain/models/home_model.dart';
+import 'package:with_me/home_page/home_model.dart';
 import 'package:with_me/home_page/ui/sort_dialog.dart';
 
 class SortLogic {

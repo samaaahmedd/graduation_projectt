@@ -5,7 +5,7 @@ import 'package:with_me/common/data/local_data/home_data.dart';
 import 'package:with_me/common/data/mapper/map_api_home_to_home.dart';
 import 'package:with_me/common/data/models/api_home_model.dart';
 import 'package:with_me/filter/filter_page.dart';
-import 'package:with_me/home_page/domain/models/home_model.dart';
+import 'package:with_me/home_page/home_model.dart';
 import 'package:with_me/home_page/ui/sort_dialog.dart';
 import 'package:with_me/home_page/ui/filter_logic.dart';
 import 'package:with_me/home_page/ui/sort.dart';

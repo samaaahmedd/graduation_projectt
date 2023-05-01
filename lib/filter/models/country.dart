@@ -5,11 +5,12 @@ enum Country{
   United_Status,
   Saudi_Arabia,
   Tounis,
+  Dubai,
   Angola,
-  Algeria,
-  Albania,
+  japan,
+  Spain,
   Brazil,
   China,
   France,
-  Greece
+  Greece,
 }
