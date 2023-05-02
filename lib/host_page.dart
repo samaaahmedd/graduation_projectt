@@ -25,15 +25,15 @@ class _HostPageState extends State<HostPage> {
         selectedIconTheme: const IconThemeData(color: Color(0xff3843d9)),
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.home_outlined),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.chat),
+            icon: Icon(Icons.message_outlined),
             label: 'Messages',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.perm_contact_cal_rounded),
+            icon: Icon(Icons.account_circle_outlined),
             label: 'Profile',
           ),
         ],

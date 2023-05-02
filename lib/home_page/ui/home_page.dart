@@ -4,6 +4,7 @@ import 'package:with_me/common/custom_widgets/rating_bar.dart';
 import 'package:with_me/common/data/local_data/home_data.dart';
 import 'package:with_me/common/data/mapper/map_api_home_to_home.dart';
 import 'package:with_me/common/data/models/api_home_model.dart';
+import 'package:with_me/details_page/details_page.dart';
 import 'package:with_me/filter/filter_page.dart';
 import 'package:with_me/home_page/home_model.dart';
 import 'package:with_me/home_page/ui/sort_dialog.dart';
@@ -94,54 +95,59 @@ class _HomePageState extends State<HomePage> {
                   itemCount: userData.data?.length,
                   itemBuilder: (context, index) {
                     final HomeModel? item = userData.data?[index];
-                    return Container(
-                      margin: const EdgeInsets.symmetric(
-                          horizontal: 20, vertical: 8),
-                      padding: const EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(12)),
-                      child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              height: 50,
-                              width: 50,
-                              decoration: BoxDecoration(
-                                  color: Colors.grey,
-                                  shape: BoxShape.circle,
-                                  image: DecorationImage(
-                                      image: NetworkImage(item?.image ??
-                                          "https://thumbs.dreamstime.com/b/surprised-female-person-confused-isolated-surprised-female-person-confused-isolated-168304856.jpg"),
-                                      fit: BoxFit.cover)),
-                            ),
-                            const SizedBox(width: 15),
-                            Expanded(
-                                child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Text(item?.name ?? "Sama"),
-                                RatingBar(rate: item?.rate ?? 0),
-                                Row(
-                                  children: [
-                                    const Icon(
-                                      Icons.location_on_outlined,
-                                      size: 17,
-                                    ),
-                                    const SizedBox(
-                                      width: 5,
-                                    ),
-                                    Text(item?.address ?? 'Egypt/cairo'),
-                                  ],
-                                ),
-                                const SizedBox(
-                                  height: 5,
-                                ),
-                                Text("${item?.price} \$"),
-                              ],
-                            ))
-                          ]),
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => const DetailsPage(),));
+                      },
+                      child: Container(
+                        margin: const EdgeInsets.symmetric(
+                            horizontal: 20, vertical: 8),
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(12)),
+                        child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                height: 50,
+                                width: 50,
+                                decoration: BoxDecoration(
+                                    color: Colors.grey,
+                                    shape: BoxShape.circle,
+                                    image: DecorationImage(
+                                        image: NetworkImage(item?.image ??
+                                            "https://thumbs.dreamstime.com/b/surprised-female-person-confused-isolated-surprised-female-person-confused-isolated-168304856.jpg"),
+                                        fit: BoxFit.cover)),
+                              ),
+                              const SizedBox(width: 15),
+                              Expanded(
+                                  child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Text(item?.name ?? "Sama"),
+                                  RatingBar(rate: item?.rate ?? 0),
+                                  Row(
+                                    children: [
+                                      const Icon(
+                                        Icons.location_on_outlined,
+                                        size: 17,
+                                      ),
+                                      const SizedBox(
+                                        width: 5,
+                                      ),
+                                      Text(item?.address ?? 'Egypt/cairo'),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 5,
+                                  ),
+                                  Text("${item?.price} \$"),
+                                ],
+                              ))
+                            ]),
+                      ),
                     );
                   },
                 );
