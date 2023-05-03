@@ -43,15 +43,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   const SizedBox(
                     height: 50,
                   ),
-                  AppTextFormFiled(
-                    hintText: "Enter Your User Name",
-                    labelText: "User Name",
-                    textInputType: TextInputType.text,
-                    onChanged: (text) {
-                      _userName = text;
-                      setState(() {});
-                    },
-                  ),
+
                   AppTextFormFiled(
                     hintText: "Enter Your Email",
                     labelText: "Email",
