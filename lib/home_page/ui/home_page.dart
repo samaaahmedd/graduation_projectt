@@ -1,15 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:with_me/common/custom_widgets/rating_bar.dart';
-import 'package:with_me/common/data/local_data/home_data.dart';
-import 'package:with_me/common/data/mapper/map_api_home_to_home.dart';
-import 'package:with_me/common/data/models/api_home_model.dart';
 import 'package:with_me/details_page/details_page.dart';
 import 'package:with_me/filter/filter_page.dart';
-import 'package:with_me/home_page/home_model.dart';
-import 'package:with_me/home_page/ui/sort_dialog.dart';
-import 'package:with_me/home_page/ui/filter_logic.dart';
-import 'package:with_me/home_page/ui/sort.dart';
 import 'package:with_me/notification_page/notification_page.dart';
 import 'search_widget.dart';
 
@@ -21,11 +14,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final SortLogic _sortLogicObj = SortLogic();
-  final FilterLogic _filterLogic = FilterLogic();
 
-  SortEnum sortValue = SortEnum.highestReview;
-  String? _searchText;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,22 +48,13 @@ class _HomePageState extends State<HomePage> {
           Row(children: [
             Expanded(child: SearchWidget(
               onChanged: (value) {
-                _searchText = value;
-                _onSearchTextChane(value);
+
               },
             )),
             IconButton(
                 constraints: const BoxConstraints(maxWidth: 25),
                 padding: EdgeInsets.zero,
                 onPressed: () {
-                  SortDialog.sortDialog(context, initialValue: sortValue)
-                      .then((value) {
-                    if (value != null) {
-                      sortValue = value;
-                      _getHomeData();
-                      setState(() {});
-                    }
-                  });
                 },
                 icon: const Icon(
                   Icons.sort,
@@ -88,13 +68,9 @@ class _HomePageState extends State<HomePage> {
                 )),
           ]),
           Expanded(
-            child: FutureBuilder(
-              future: _getHomeData(),
-              builder: (context, userData) {
-                return ListView.builder(
-                  itemCount: userData.data?.length,
+            child: ListView.builder(
+                  itemCount: 5,
                   itemBuilder: (context, index) {
-                    final HomeModel? item = userData.data?[index];
                     return GestureDetector(
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(builder: (context) => const DetailsPage(),));
@@ -112,11 +88,11 @@ class _HomePageState extends State<HomePage> {
                               Container(
                                 height: 50,
                                 width: 50,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                     color: Colors.grey,
                                     shape: BoxShape.circle,
                                     image: DecorationImage(
-                                        image: NetworkImage(item?.image ??
+                                        image: NetworkImage(
                                             "https://thumbs.dreamstime.com/b/surprised-female-person-confused-isolated-surprised-female-person-confused-isolated-168304856.jpg"),
                                         fit: BoxFit.cover)),
                               ),
@@ -126,78 +102,45 @@ class _HomePageState extends State<HomePage> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
-                                  Text(item?.name ?? "Sama"),
-                                  RatingBar(rate: item?.rate ?? 0),
+                                  Text("Sama"),
+                                  const RatingBar(rate: 0),
                                   Row(
-                                    children: [
-                                      const Icon(
+                                    children: const [
+                                      Icon(
                                         Icons.location_on_outlined,
                                         size: 17,
                                       ),
-                                      const SizedBox(
+                                      SizedBox(
                                         width: 5,
                                       ),
-                                      Text(item?.address ?? 'Egypt/cairo'),
+                                      Text( 'Egypt/cairo'),
                                     ],
                                   ),
                                   const SizedBox(
                                     height: 5,
                                   ),
-                                  Text("${item?.price} \$"),
+                                  const Text("2500 \$"),
                                 ],
                               ))
                             ]),
                       ),
                     );
                   },
-                );
-              },
-            ),
+                )
+
           ),
         ],
       ),
     );
   }
 
-  Timer? _searchTimer;
-  void _onSearchTextChane(String text) {
-    _searchTimer?.cancel();
-    _searchTimer = Timer(const Duration(milliseconds: 350), () async {
-      await _getHomeData();
-      setState(() {});
-    });
-  }
 
-  List<HomeModel> _getSearchResult(String? text, List<HomeModel> data) {
-    final List<HomeModel> searchData = [];
-    for (HomeModel item in data) {
-      if (item.name.toLowerCase().contains(text?.toLowerCase() ?? '')) {
-        searchData.add(item);
-      }
-    }
-    return searchData;
-  }
-
-  Future<List<HomeModel>> _getHomeData() async {
-    final apiModel = ApiHomeModel.fromJson(apiHomeLocalData);
-    List<HomeModel> homeData = apiModel.data.map((e) => e.map()).toList();
-    if (_searchText != null && _searchText != "") {
-      homeData = _getSearchResult(_searchText, [...homeData]);
-    }
-    homeData = _filterLogic(homeData);
-    return _sortLogicObj.sortData(homeData, sortValue);
-  }
 
   Future<void> _navigateToFilter() async {
     Navigator.of(context)
         .push(MaterialPageRoute(
       builder: (context) => const FilterPage(),
-    ))
-        .then((value) {
-      if (value != null) {
-        _getHomeData();
-        setState(() {});
-      }
-    });
+    ));
+
   }
 }

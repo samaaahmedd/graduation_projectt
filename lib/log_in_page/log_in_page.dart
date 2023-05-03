@@ -57,13 +57,7 @@ class _LogInPageState extends State<LogInPage> {
                       setState(() {});
                     },
                   ),
-                  Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 5),
-                      alignment: Alignment.centerRight,
-                      child: const Text(
-                        "Forget Password?",
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      )),
+
                   const SizedBox(
                     height: 40,
                   ),
