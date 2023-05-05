@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:with_me/details_request_pages/details_request.dart';
 
 import '../common/custom_widgets/custom_button.dart';
 
@@ -80,7 +81,7 @@ class _DetailsPageState extends State<DetailsPage> {
               const Divider (thickness: 1,color: Colors.white,
               ),
               const SizedBox(height: 5,),
-          const Text("Tourguide" ,style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+              const Text("Tourguide" ,style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
               const SizedBox(height: 5,),
               const Divider(thickness: 1,color: Colors.white,),
               const SizedBox(height: 12,),
@@ -92,6 +93,7 @@ class _DetailsPageState extends State<DetailsPage> {
               ),
               CustomButton(
                 onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const DetailsRequest(),));
 
                 },
                 text: "Send Request",
