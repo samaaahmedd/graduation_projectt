@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:with_me/home_page/ui/home_page.dart';
-import 'package:with_me/messages_page/messages_page.dart';
+import 'package:with_me/request_page/request_page.dart';
 
 import 'profile_page/profile_page.dart';
 
@@ -13,7 +13,7 @@ class HostPage extends StatefulWidget {
 
 class _HostPageState extends State<HostPage> {
   int _selectedIndex = 0;
-  final List<Widget> _tabs = const [HomePage(),MessagesPage(),ProfilePage()];
+  final List<Widget> _tabs = const [HomePage(),RequestPage(),ProfilePage()];
 
   @override
   Widget build(BuildContext context) {

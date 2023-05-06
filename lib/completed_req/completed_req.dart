@@ -45,7 +45,7 @@ class _CompletedRequestState extends State<CompletedRequest> {
                 ),
                 const SizedBox(height: 30,),
 
-                Center(child: const Text("Your Request has been sent successfully",style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold) )),
+                Center(child: const Text(textAlign: TextAlign.center ,"Your Request has been sent successfully",style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold) )),
 
 
 

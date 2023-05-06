@@ -13,7 +13,7 @@ class _NotificationPageState extends State<NotificationPage> {
     return Scaffold(
       backgroundColor: const Color(0xff5661f1),
       appBar: AppBar(
-          automaticallyImplyLeading: true,
+          automaticallyImplyLeading: false,
           title: const Text("Notification"),
           centerTitle: true),
 

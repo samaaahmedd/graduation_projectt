@@ -44,7 +44,7 @@ class _TouristRequestState extends State<TouristRequest> {
                   TextStyle(color: Colors.white, fontSize: 18),
                 ),
                 AppTextFormFiled(
-                  hintText: "",
+                  hintText: "22/12/2005",
                   labelText: "Date",
                   textInputType: TextInputType.datetime,
                   onChanged: (text) {
@@ -62,7 +62,7 @@ class _TouristRequestState extends State<TouristRequest> {
                   TextStyle(color: Colors.white, fontSize: 18),
                 ),
                 AppTextFormFiled(
-                  hintText: "",
+                  hintText: "2 weeks",
                   labelText: "Period",
                   textInputType: TextInputType.datetime,
                   onChanged: (text) {
@@ -80,7 +80,7 @@ class _TouristRequestState extends State<TouristRequest> {
                   TextStyle(color: Colors.white, fontSize: 18),
                 ),
                 AppTextFormFiled(
-                  hintText: "",
+                  hintText: "1",
                   labelText: "No.of Persons",
                   textInputType: TextInputType.number,
                   onChanged: (text) {
@@ -97,7 +97,7 @@ class _TouristRequestState extends State<TouristRequest> {
                   TextStyle(color: Colors.white, fontSize: 18),
                 ),
                 AppTextFormFiled(
-                  hintText: "",
+                  hintText: "50",
                   labelText: "Price Range",
                   textInputType: TextInputType.number,
                   onChanged: (text) {
