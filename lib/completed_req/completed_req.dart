@@ -21,7 +21,7 @@ class _CompletedRequestState extends State<CompletedRequest> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff5661f1),
+      backgroundColor: Color(0xffffffff),
       body:
       Center(
         child: Padding(
@@ -33,22 +33,18 @@ class _CompletedRequestState extends State<CompletedRequest> {
               children: [
                 Center(
                   child: Container(
-                    height: 150,
-                    width: 150,
+                    height: 180,
+                    width: 180,
                     decoration: const BoxDecoration(
-                        color: Colors.grey,
-                        shape: BoxShape.circle,
+
                         image: DecorationImage(
-                            image: AssetImage("assets/smile.png"),
+                            image: AssetImage("assets/mark.png"),
                             fit: BoxFit.cover)),
                   ),
                 ),
                 const SizedBox(height: 30,),
 
                 Center(child: const Text(textAlign: TextAlign.center ,"Your Request has been sent successfully",style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold) )),
-
-
-
 
             ],
 

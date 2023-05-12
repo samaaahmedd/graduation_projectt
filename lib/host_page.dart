@@ -33,7 +33,7 @@ class _HostPageState extends State<HostPage> {
             label: 'Messages',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle_outlined),
+            icon: Icon(Icons.),
             label: 'Profile',
           ),
         ],

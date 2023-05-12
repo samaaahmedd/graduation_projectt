@@ -43,7 +43,8 @@ class _SplashPageState extends State<SplashPage> {
       Navigator.of(context).pushReplacement(MaterialPageRoute(
         builder: (context) => const HostPage(),
       ));
-    } else {
+    }
+    else {
       Navigator.of(context).pushReplacement(MaterialPageRoute(
         builder: (context) => const  WelcomePage(),
       ));
