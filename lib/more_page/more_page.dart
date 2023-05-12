@@ -26,30 +26,31 @@ class _MorePageState extends State<MorePage> {
         centerTitle: true,
         backgroundColor: AppColors.secondaryColor,
       ),
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(15),
         child: Column(
           children: [
-            Container(
-              height: 100,
-              width: 100,
-              decoration:  BoxDecoration(
-                  color: Colors.grey,
-                  borderRadius: BorderRadius.circular(20),
-                  image: const DecorationImage(
-                      image: NetworkImage(
-                          "https://thumbs.dreamstime.com/b/surprised-female-person-confused-isolated-surprised-female-person-confused-isolated-168304856.jpg"),
-                      fit: BoxFit.cover)),
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            Text('Sama Ahamed',
-                style: TextStyle(
-                    color: AppColors.textColor,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 20)),
-            const Spacer(),
+            const SizedBox(height: 25,),
+
+            // Container(
+            //   height: 100,
+            //   width: 100,
+            //   decoration:  BoxDecoration(
+            //       color: Colors.grey,
+            //       borderRadius: BorderRadius.circular(20),
+            //       image: const DecorationImage(
+            //           image: NetworkImage(
+            //               "https://thumbs.dreamstime.com/b/surprised-female-person-confused-isolated-surprised-female-person-confused-isolated-168304856.jpg"),
+            //           fit: BoxFit.cover)),
+            // ),
+            // const SizedBox(
+            //   height: 15,
+            // ),
+            // Text('Sama Ahamed',
+            //     style: TextStyle(
+            //         color: AppColors.textColor,
+            //         fontWeight: FontWeight.w500,
+            //         fontSize: 20)),
             ListTile(
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
@@ -120,7 +121,7 @@ class _MorePageState extends State<MorePage> {
               padding: const EdgeInsets.symmetric(horizontal: 15.0),
               child: Divider(color: AppColors.fifthColor, height: 2),
             ),
-            const Spacer(),
+            const SizedBox(height: 100,),
             CustomButton(
               onPressed: () async {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
