@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:with_me/home_page/ui/home_page.dart';
 import 'package:with_me/request_page/request_page.dart';
-
 import 'profile_page/profile_page.dart';
 
 class HostPage extends StatefulWidget {
@@ -10,6 +9,8 @@ class HostPage extends StatefulWidget {
   @override
   State<HostPage> createState() => _HostPageState();
 }
+
+// mage edit
 
 class _HostPageState extends State<HostPage> {
   int _selectedIndex = 0;
@@ -33,7 +34,7 @@ class _HostPageState extends State<HostPage> {
             label: 'Messages',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.),
+            icon: Icon(Icons.settings),
             label: 'Profile',
           ),
         ],
