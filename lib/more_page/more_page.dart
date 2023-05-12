@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:with_me/about_app_page/about_app_page.dart';
 import 'package:with_me/common/color/app_color.dart';
 import 'package:with_me/common/custom_widgets/custom_button.dart';
 import 'package:with_me/common/domain/use_cases/set_login_usecase.dart';
+import 'package:with_me/contact_us_page/contact_us_page.dart';
 import 'package:with_me/profile_page/profile_page.dart';
+import 'package:with_me/terms_privacy_page/terms_privacy_page.dart';
 import 'package:with_me/welcome_page/welcome_page.dart';
 
 class MorePage extends StatefulWidget {
@@ -64,10 +67,12 @@ class _MorePageState extends State<MorePage> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15.0),
-              child: Divider(color: AppColors.fifthColor, height: 1),
+              child: Divider(color: AppColors.fifthColor, height: 2),
             ),
             ListTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ContactUsPage(),));
+              },
               minLeadingWidth: 20,
               leading:
                   Icon(Iconsax.message, color: AppColors.textColor, size: 26),
@@ -79,7 +84,41 @@ class _MorePageState extends State<MorePage> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15.0),
-              child: Divider(color: AppColors.fifthColor, height: 1),
+              child: Divider(color: AppColors.fifthColor, height: 2),
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const AboutAppPage(),));
+              },
+              minLeadingWidth: 20,
+              leading:
+                  Icon(Iconsax.info_circle, color: AppColors.textColor, size: 24),
+              title: Text('About App',
+                  style: TextStyle(
+                      color: AppColors.textColor,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 18)),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15.0),
+              child: Divider(color: AppColors.fifthColor, height: 2),
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const TermsPrivacyPage(),));
+              },
+              minLeadingWidth: 20,
+              leading:
+              Icon(Iconsax.security, color: AppColors.textColor, size: 24),
+              title: Text('Terms Of Use && Privacy',
+                  style: TextStyle(
+                      color: AppColors.textColor,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 18)),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15.0),
+              child: Divider(color: AppColors.fifthColor, height: 2),
             ),
             const Spacer(),
             CustomButton(
