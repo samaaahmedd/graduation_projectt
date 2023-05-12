@@ -11,7 +11,6 @@ class SearchWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 12),
       child: AppTextFormFiled(
-        labelText: "Search",
         hintText: "Search",
         onChanged: onChanged,
         contentPadding: const EdgeInsets.symmetric(horizontal: 10),

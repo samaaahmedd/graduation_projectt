@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:with_me/home_page/ui/home_page.dart';
+import 'package:with_me/common/color/app_color.dart';
+import 'package:with_me/home_page/home_page.dart';
 import 'package:with_me/request_page/request_page.dart';
-import 'profile_page/profile_page.dart';
+import 'package:iconsax/iconsax.dart';
+import 'more_page/more_page.dart';
 
 class HostPage extends StatefulWidget {
   const HostPage({Key? key}) : super(key: key);
@@ -10,36 +12,38 @@ class HostPage extends StatefulWidget {
   State<HostPage> createState() => _HostPageState();
 }
 
-// mage edit
-
 class _HostPageState extends State<HostPage> {
   int _selectedIndex = 0;
-  final List<Widget> _tabs = const [HomePage(),RequestPage(),ProfilePage()];
+  final List<Widget> _tabs = const [HomePage(), RequestPage(), MorePage()];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: _tabs[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        showSelectedLabels: false,
+        showSelectedLabels: true,
         showUnselectedLabels: false,
-        selectedIconTheme: const IconThemeData(color: Color(0xff3843d9)),
+        selectedIconTheme:
+            IconThemeData(color: AppColors.primaryColor, size: 25),
+        selectedLabelStyle:
+            TextStyle(color: AppColors.textColor, fontWeight: FontWeight.w500),
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
+            icon: Icon(Iconsax.home),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.message_outlined),
-            label: 'Messages',
+            icon: Icon(Iconsax.direct_inbox),
+            label: 'Requests',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Profile',
+            icon: Icon(Iconsax.more),
+            label: 'More',
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: AppColors.primaryColor,
+        backgroundColor: AppColors.sixColor,
         onTap: _onItemTapped,
       ),
     );

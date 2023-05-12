@@ -50,7 +50,6 @@ class _LogInPageState extends State<LogInPage> {
                   ),
                   AppTextFormFiled(
                     hintText: "Enter Your Email",
-                    labelText: "Email",
                     textInputType: TextInputType.emailAddress,
                     onChanged: (email) {
                       _email = email;
@@ -63,7 +62,6 @@ class _LogInPageState extends State<LogInPage> {
                   ),
                   AppTextFormFiled(
                     hintText: "Enter Your Password",
-                    labelText: "Password",
                     isSecure: true,
                     onChanged: (pass) {
                       _password = pass;

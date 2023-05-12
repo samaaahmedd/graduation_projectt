@@ -4,7 +4,7 @@ import 'package:with_me/common/custom_widgets/rating_bar.dart';
 import 'package:with_me/details_page/details_page.dart';
 import 'package:with_me/filter/filter_page.dart';
 import 'package:with_me/notification_page/notification_page.dart';
-import 'search_widget.dart';
+import 'ui/search_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

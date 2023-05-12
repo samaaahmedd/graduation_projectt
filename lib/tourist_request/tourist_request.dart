@@ -45,7 +45,6 @@ class _TouristRequestState extends State<TouristRequest> {
                 ),
                 AppTextFormFiled(
                   hintText: "22/12/2005",
-                  labelText: "Date",
                   textInputType: TextInputType.datetime,
                   onChanged: (text) {
                     date= text;
@@ -63,7 +62,6 @@ class _TouristRequestState extends State<TouristRequest> {
                 ),
                 AppTextFormFiled(
                   hintText: "2 weeks",
-                  labelText: "Period",
                   textInputType: TextInputType.datetime,
                   onChanged: (text) {
                     period= text;
@@ -81,7 +79,6 @@ class _TouristRequestState extends State<TouristRequest> {
                 ),
                 AppTextFormFiled(
                   hintText: "1",
-                  labelText: "No.of Persons",
                   textInputType: TextInputType.number,
                   onChanged: (text) {
                     noOfPersons= text;
@@ -98,7 +95,6 @@ class _TouristRequestState extends State<TouristRequest> {
                 ),
                 AppTextFormFiled(
                   hintText: "50",
-                  labelText: "Price Range",
                   textInputType: TextInputType.number,
                   onChanged: (text) {
                     pricerange= text;

@@ -1,8 +1,5 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:with_me/completed_req/completed_req.dart';
-
 import '../common/custom_widgets/custom_button.dart';
 import '../common/custom_widgets/text_form_field.dart';
 import '../filter/widgets/slider_widget.dart';
@@ -49,7 +46,6 @@ class _DetailsRequestState extends State<DetailsRequest> {
                 ),
                 AppTextFormFiled(
                   hintText: "",
-                  labelText: "Date",
                   textInputType: TextInputType.datetime,
                   onChanged: (text) {
                     date= text;
@@ -67,7 +63,6 @@ class _DetailsRequestState extends State<DetailsRequest> {
                 ),
                 AppTextFormFiled(
                   hintText: "",
-                  labelText: "Period",
                   textInputType: TextInputType.datetime,
                   onChanged: (text) {
                     period= text;
@@ -85,7 +80,6 @@ class _DetailsRequestState extends State<DetailsRequest> {
                 ),
                 AppTextFormFiled(
                   hintText: "",
-                  labelText: "No.of Persons",
                   textInputType: TextInputType.number,
                   onChanged: (text) {
                     noOfPersons= text;

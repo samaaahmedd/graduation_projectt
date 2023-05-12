@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:with_me/common/color/app_color.dart';
 
 class AppTextFormFiled extends StatefulWidget {
-  final String labelText;
   final String hintText;
   final TextInputType? textInputType;
   final void Function(String)? onChanged;
   final bool? isSecure;
   final Widget? leadingWidget;
+  final bool? readOnly;
   final EdgeInsetsGeometry? contentPadding;
   const AppTextFormFiled(
       {Key? key,
-      required this.labelText,
       required this.hintText,
       this.textInputType,
       this.onChanged,
-      this.isSecure, this.leadingWidget, this.contentPadding})
+      this.isSecure,
+      this.leadingWidget,
+      this.contentPadding,
+      this.readOnly})
       : super(key: key);
 
   @override
@@ -28,9 +31,9 @@ class _AppTextFormFiledState extends State<AppTextFormFiled> {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 15),
       child: TextFormField(
+        readOnly: widget.readOnly ?? false,
         obscureText: widget.isSecure == true ? isSecure : false,
         onChanged: widget.onChanged,
-
         textInputAction: TextInputAction.next,
         keyboardType: widget.textInputType,
         onTapOutside: (event) {
@@ -42,27 +45,29 @@ class _AppTextFormFiledState extends State<AppTextFormFiled> {
           }
           return null;
         },
-        decoration: InputDecoration(contentPadding: widget.contentPadding,
-            prefixIconConstraints: const BoxConstraints(maxWidth: 50,minWidth: 10),
+        decoration: InputDecoration(
+            contentPadding: widget.contentPadding,
+            prefixIconConstraints:
+                const BoxConstraints(maxWidth: 50, minWidth: 10),
             fillColor: Colors.white,
             prefixIcon: widget.leadingWidget,
             filled: true,
             // suffix: _secureAye(),
             suffixIcon: _secureAye(),
             border: OutlineInputBorder(
-                borderSide: const BorderSide(color: Colors.black),
+                borderSide: BorderSide(color: AppColors.sixColor),
                 borderRadius: BorderRadius.circular(12)),
             // labelText: widget.labelText,
             hintText: widget.hintText,
             labelStyle: const TextStyle(color: Colors.black),
             enabledBorder: OutlineInputBorder(
-                borderSide: const BorderSide(color: Colors.black),
+                borderSide: BorderSide(color: AppColors.sixColor),
                 borderRadius: BorderRadius.circular(12)),
             disabledBorder: OutlineInputBorder(
-                borderSide: const BorderSide(color: Colors.black),
+                borderSide: BorderSide(color: AppColors.sixColor),
                 borderRadius: BorderRadius.circular(12)),
             focusedBorder: OutlineInputBorder(
-                borderSide: const BorderSide(color: Colors.black),
+                borderSide: BorderSide(color: AppColors.sixColor),
                 borderRadius: BorderRadius.circular(12))),
         maxLines: 1,
       ),

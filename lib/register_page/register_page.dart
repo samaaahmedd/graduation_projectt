@@ -46,7 +46,6 @@ class _RegisterPageState extends State<RegisterPage> {
 
                   AppTextFormFiled(
                     hintText: "Enter Your Email",
-                    labelText: "Email",
                     textInputType: TextInputType.emailAddress,
                     onChanged: (email) {
                       _email = email;
@@ -55,7 +54,6 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                   AppTextFormFiled(
                     hintText: "Enter Your Password",
-                    labelText: "Password",
                     isSecure: true,
                     onChanged: (pass) {
                       _password = pass;
@@ -64,7 +62,6 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                   AppTextFormFiled(
                     hintText: "Confirm Your Password",
-                    labelText: "Confirm Password",
                     isSecure: true,
                     onChanged: (pass) {
                       _confirmPassword = pass;

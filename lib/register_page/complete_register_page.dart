@@ -60,7 +60,6 @@ class _CompleteRegisterPageState extends State<CompleteRegisterPage> {
                   ),
                   AppTextFormFiled(
                     hintText: "Enter First Name",
-                    labelText: "Enter First Name",
                     onChanged: (text) {
                       _firstName = text;
                       setState(() {});
@@ -72,7 +71,6 @@ class _CompleteRegisterPageState extends State<CompleteRegisterPage> {
                   ),
                   AppTextFormFiled(
                     hintText: "Last name",
-                    labelText: "Last Name",
                     onChanged: (email) {
                       _lastName = email;
                       setState(() {});
@@ -84,7 +82,6 @@ class _CompleteRegisterPageState extends State<CompleteRegisterPage> {
                   ),
                   AppTextFormFiled(
                     hintText: "Age",
-                    labelText: "Age",
                     textInputType: TextInputType.number,
                     onChanged: (pass) {
                       _age = pass;
@@ -143,7 +140,6 @@ class _CompleteRegisterPageState extends State<CompleteRegisterPage> {
                             ),
                             AppTextFormFiled(
                               hintText: "Experience",
-                              labelText: "Experience",
                               textInputType: TextInputType.number,
                               onChanged: (experience) {
                                 _experience = experience;
@@ -161,7 +157,6 @@ class _CompleteRegisterPageState extends State<CompleteRegisterPage> {
                   ),
                   AppTextFormFiled(
                     hintText: "Phone Number",
-                    labelText: "Enter Phone Number",
                     textInputType: TextInputType.phone,
                     onChanged: (phone) {
                       _phoneNumber = phone;
