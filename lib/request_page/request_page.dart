@@ -1,6 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:with_me/tourist_request/tourist_request.dart';
+
+import '../common/color/app_color.dart';
 
 class RequestPage extends StatefulWidget {
   const RequestPage({Key? key}) : super(key: key);
@@ -13,45 +14,68 @@ class _RequestPageState extends State<RequestPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff5661f1),
-      appBar: AppBar(centerTitle: true,title: const Text('Requests' , style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
-        elevation: 0,
-        backgroundColor: Colors.transparent,
+      backgroundColor: AppColors.backgroundColor,
+      appBar: AppBar(
+        title: const Text('My Requests'),
+        centerTitle: true,
+        backgroundColor: AppColors.secondaryColor,
       ),
       body: ListView.builder(
+        padding: const EdgeInsets.all(12),
         itemCount: 5,
         itemBuilder: (context, index) {
-          return
-              GestureDetector(onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const TouristRequest(),));
+          return Padding(
+            padding: const EdgeInsets.symmetric(vertical: 8.0),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const TouristRequest(),
+                ));
               },
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-            children: [
-                  Container(
-                    height: 50,
-                    width: 50,
-                    decoration: const BoxDecoration(
-                        color: Colors.grey,
-                        shape: BoxShape.circle,
-                        image: DecorationImage(
-                            image: NetworkImage(
-                                "https://thumbs.dreamstime.com/b/surprised-female-person-confused-isolated-surprised-female-person-confused-isolated-168304856.jpg"),
-                            fit: BoxFit.cover)),
-                  ),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  Expanded(child: Text("Sahar Ahmed", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold))),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  Text("22/12/2005" , style: TextStyle(fontSize: 16),)],
-
-          ),
+              child: Material(
+                color: AppColors.sixColor,
+                elevation: 1,
+                borderRadius: BorderRadius.circular(8),
+                child: Row(
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.all(10),
+                      height: 60,
+                      width: 60,
+                      decoration: BoxDecoration(
+                          color: Colors.grey,
+                          borderRadius: BorderRadius.circular(12),
+                          image: const DecorationImage(
+                              image: NetworkImage(
+                                  "https://thumbs.dreamstime.com/b/surprised-female-person-confused-isolated-surprised-female-person-confused-isolated-168304856.jpg"),
+                              fit: BoxFit.cover)),
+                    ),
+                    Expanded(
+                        child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("Sahar Ahmed",
+                            style: TextStyle(
+                                color: AppColors.textColor,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold)),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          "22/12/2005",
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: AppColors.textColor,
+                          ),
+                        ),
+                      ],
+                    )),
+                  ],
                 ),
-              );
+              ),
+            ),
+          );
         },
       ),
     );
