@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:with_me/common/color/app_color.dart';
 
 class RatingBar extends StatelessWidget {
   const RatingBar({Key? key, required this.rate}) : super(key: key);
@@ -11,15 +12,15 @@ class RatingBar extends StatelessWidget {
       child: ListView.builder(
         itemBuilder: (context, index) {
           if(index < rate){
-            return const Icon(
+            return  Icon(
               Icons.star,
-              color: Colors.amber,
+              color: AppColors.primaryColor,
               size: 16,
             );
           }
-          return const Icon(
+          return  Icon(
             Icons.star_border,
-            color: Colors.amber,
+            color: AppColors.primaryColor,
             size: 17,
           );
         },
