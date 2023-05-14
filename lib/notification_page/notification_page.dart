@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:with_me/common/color/app_color.dart';
 
 class NotificationPage extends StatefulWidget {
   const NotificationPage({Key? key}) : super(key: key);
@@ -11,11 +12,13 @@ class _NotificationPageState extends State<NotificationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff5661f1),
+      backgroundColor: AppColors.sixColor,
       appBar: AppBar(
           automaticallyImplyLeading: false,
           title: const Text("Notification"),
-          centerTitle: true),
+          centerTitle: true,
+        backgroundColor: AppColors.textColor,
+      ),
 
       body: ListView.builder(
         itemCount: 2,
