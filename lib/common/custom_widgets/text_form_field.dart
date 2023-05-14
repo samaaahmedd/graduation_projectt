@@ -49,7 +49,7 @@ class _AppTextFormFiledState extends State<AppTextFormFiled> {
             contentPadding: widget.contentPadding,
             prefixIconConstraints:
                 const BoxConstraints(maxWidth: 50, minWidth: 10),
-            fillColor: Colors.white,
+            fillColor: AppColors.sixColor,
             prefixIcon: widget.leadingWidget,
             filled: true,
             // suffix: _secureAye(),

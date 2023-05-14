@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:with_me/completed_req/completed_req.dart';
+import '../common/color/app_color.dart';
 import '../common/custom_widgets/custom_button.dart';
 import '../common/custom_widgets/text_form_field.dart';
 import '../filter/widgets/slider_widget.dart';
@@ -20,11 +21,11 @@ class _DetailsRequestState extends State<DetailsRequest> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff5661f1),
-      appBar: AppBar(
-        automaticallyImplyLeading: true,
-        elevation: 0,
-        backgroundColor: Colors.transparent,
+      backgroundColor: AppColors.backgroundColor,
+      appBar: AppBar(automaticallyImplyLeading: true,
+        title: const Text('Your Request'),
+        centerTitle: true,
+        backgroundColor: AppColors.secondaryColor,
       ),
       body:
       Padding(
@@ -34,15 +35,14 @@ class _DetailsRequestState extends State<DetailsRequest> {
             crossAxisAlignment: CrossAxisAlignment.start,
 
               children: [
-                Center(child: const Text("Your Request",style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold) )),
                 const SizedBox(
                   height: 20,
                 ),
 
-                const Text(
+                 Text(
                   "Date",
                   style:
-                  TextStyle(color: Colors.white, fontSize: 18),
+                  TextStyle(color: AppColors.textColor, fontSize: 18,fontWeight: FontWeight.bold,),
                 ),
                 AppTextFormFiled(
                   hintText: "",
@@ -56,10 +56,10 @@ class _DetailsRequestState extends State<DetailsRequest> {
                   height: 20,
                 ),
 
-                const Text(
+                 Text(
                   "Period",
                   style:
-                  TextStyle(color: Colors.white, fontSize: 18),
+                  TextStyle(color: AppColors.textColor, fontSize: 18,fontWeight: FontWeight.bold,),
                 ),
                 AppTextFormFiled(
                   hintText: "",
@@ -73,10 +73,10 @@ class _DetailsRequestState extends State<DetailsRequest> {
                   height: 20,
                 ),
 
-                const Text(
+                 Text(
                   "No.of Persons",
                   style:
-                  TextStyle(color: Colors.white, fontSize: 18),
+                  TextStyle(color: AppColors.textColor, fontSize: 18,fontWeight: FontWeight.bold,),
                 ),
                 AppTextFormFiled(
                   hintText: "",

@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:with_me/common/color/app_color.dart';
 
 class SliderWidget extends StatelessWidget {
   final double sliderValue;
@@ -13,10 +14,10 @@ class SliderWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
+          Text(
             "Price Range",
             style: TextStyle(
-                color: Colors.white,
+                color: AppColors.textColor,
                 fontWeight: FontWeight.bold,
                 fontSize: 18),
           ),
@@ -27,8 +28,8 @@ class SliderWidget extends StatelessWidget {
                 )),
             child: Slider(
               value: sliderValue,
-              activeColor: Colors.white,
-              inactiveColor: Colors.white12,
+              activeColor: AppColors.primaryColor,
+              inactiveColor: AppColors.fifthColor,
               min: 0,
               max: 10000,
               label: sliderValue.round().toString(),

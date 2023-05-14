@@ -21,15 +21,15 @@ class HomeModel extends Equatable {
 
   @override
   List<Object?> get props => [
-        image,
-        name,
-        rate,
-        address,
-        price,
-        userType,
-        country,
-        language,
-        age,
-        gender
-      ];
+    image,
+    name,
+    rate,
+    address,
+    price,
+    userType,
+    country,
+    language,
+    age,
+    gender
+  ];
 }

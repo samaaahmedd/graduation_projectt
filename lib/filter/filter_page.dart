@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:with_me/common/color/app_color.dart';
 import 'package:with_me/common/custom_widgets/custom_button.dart';
 import 'package:with_me/filter/models/country.dart';
 import 'package:with_me/filter/models/gender.dart';
@@ -33,7 +34,7 @@ class _FilterPageState extends State<FilterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff5661f1),
+      backgroundColor: AppColors.sixColor,
       appBar: AppBar(
           actions: [
             IconButton(
@@ -48,7 +49,7 @@ class _FilterPageState extends State<FilterPage> {
             style: TextStyle(color: Colors.white),
           ),
           centerTitle: true,
-          backgroundColor: Colors.transparent),
+          backgroundColor: AppColors.textColor),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20),
@@ -77,6 +78,7 @@ class _FilterPageState extends State<FilterPage> {
                   setState(() {});
                 },
                 label: "Gender",
+
               ),
               CustomDropdownButton(
                 enumList: Languages.values,
@@ -102,7 +104,7 @@ class _FilterPageState extends State<FilterPage> {
       ),
       bottomNavigationBar: Container(
         padding: const EdgeInsets.symmetric(horizontal: 25),
-        color: const Color(0xff3843d9),
+        color: AppColors.sixColor,
         width: MediaQuery.of(context).size.width,
         child: Row(children: [
           Expanded(

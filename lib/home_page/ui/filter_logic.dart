@@ -1,5 +1,7 @@
 import 'package:with_me/filter/models/filter_model.dart';
-import 'package:with_me/home_page/ui/home_model.dart';
+
+import '../../common/data/home_model.dart';
+
 
 class FilterLogic {
   final FilterModel? _filterModel = FilterModel.getInstance();
