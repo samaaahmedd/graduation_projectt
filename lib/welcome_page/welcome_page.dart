@@ -74,7 +74,7 @@ class _WelcomePageState extends State<WelcomePage> {
               child: Container(
                   alignment: Alignment.center,
                   padding: const EdgeInsets.symmetric(vertical: 20),
-                  color: Color(0xff5661f1),
+                  color: Color(0xff226096),
                   child: const Text(
                     'Register',
                     style: TextStyle(
