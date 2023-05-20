@@ -3,6 +3,8 @@ import 'package:with_me/common/custom_widgets/custom_button.dart';
 import 'package:with_me/filter/models/user_type.dart';
 import 'package:with_me/register_page/register_page.dart';
 
+import '../common/color/app_color.dart';
+
 
 class RegisterTypePage extends StatelessWidget {
   const RegisterTypePage({Key? key}) : super(key: key);
@@ -10,7 +12,7 @@ class RegisterTypePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff5661f1),
+      backgroundColor: AppColors.forthColor,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -34,7 +36,7 @@ class RegisterTypePage extends StatelessWidget {
                 onPressed: () => _navigateToRegisterPage(context,UserType.Tour_Guide),
                 text: "Tour Guide"),
             CustomButton(
-                onPressed: () => _navigateToRegisterPage(context,UserType.Photographer),
+                onPressed: () => _navigateToRegisterPage(context,UserType.Tour_Guide),
                 text: "Photographer"),
             CustomButton(
                 onPressed: () => _navigateToRegisterPage(context,UserType.Tourist),

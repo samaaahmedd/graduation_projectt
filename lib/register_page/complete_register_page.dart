@@ -33,7 +33,7 @@ class _CompleteRegisterPageState extends State<CompleteRegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff5661f1),
+      backgroundColor: const Color(0xffc5e1ec),
       body: SafeArea(
         child: Form(
           key: _formKey,

@@ -22,7 +22,7 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff5661f1),
+      backgroundColor: Color(0xffc5e1ec),
       body: SafeArea(
         child: Form(
           key: _formKey,
@@ -88,7 +88,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         child: const Text(
                           "LogIn Now",
                           style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
+                              color: Colors.black, fontWeight: FontWeight.bold),
                         ),
                       )
                     ],

@@ -15,7 +15,7 @@ class CompletedRequest extends StatefulWidget {
 class _CompletedRequestState extends State<CompletedRequest> {
   @override
   void initState() {
-    Timer(const Duration(seconds: 10), () {
+    Timer(const Duration(seconds: 5), () {
       Navigator.of(context).push(MaterialPageRoute(
         builder: (context) => const HostPage(),
       ));

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:with_me/common/color/app_color.dart';
 import 'package:with_me/common/custom_widgets/custom_button.dart';
 import 'package:with_me/common/custom_widgets/text_form_field.dart';
 import 'package:with_me/common/domain/use_cases/set_login_usecase.dart';
@@ -22,7 +23,7 @@ class _LogInPageState extends State<LogInPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff5661f1),
+      backgroundColor: AppColors.forthColor,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -88,7 +89,7 @@ class _LogInPageState extends State<LogInPage> {
                         child: const Text(
                           "Register Now",
                           style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
+                              color: Colors.black, fontWeight: FontWeight.bold),
                         ),
                       )
                     ],
