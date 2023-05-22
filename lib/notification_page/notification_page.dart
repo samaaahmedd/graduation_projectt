@@ -17,7 +17,7 @@ class _NotificationPageState extends State<NotificationPage> {
           automaticallyImplyLeading: false,
           title: const Text("Notification"),
           centerTitle: true,
-        backgroundColor: AppColors.textColor,
+        backgroundColor: AppColors.primaryColor,
       ),
 
       body: ListView.builder(

@@ -22,8 +22,8 @@ class _AboutAppPageState extends State<AboutAppPage> {
         child: SingleChildScrollView(
           child: Column(children: [
             Text(
-              'With You app the free app that you can write whatever you want, put a picture or an audio recording to hear it whenever you want, Add your Missions as a tasks to motivate you to complete them and organize your tasks, Put all your memories details and photo to always remember them whenever you want\n\n'
-              'Save your private note ,task and memory in secret to be the only one how can with own password you created.'
+              'An application that makes traveling cheaper and easier. Reservation through atravel agency costs a lot of money and forces you to adhere to their trip plan andthat you are always with the tour group\n\n'
+              '“WithYou” you do not book through a travel agency,but you book with someone of the same nationality as you'
               '\n\nYou can save your preferable note, task and memory in favorite to get in any time.',
               style: TextStyle(
                   fontSize: 17,

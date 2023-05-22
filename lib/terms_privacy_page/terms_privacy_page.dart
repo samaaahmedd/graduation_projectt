@@ -34,7 +34,7 @@ class _TermsPrivacyPageState extends State<TermsPrivacyPage> {
               height: 15,
             ),
             Text(
-              "These Terms of Use govern your use of MEGA MAR,and any information, text, graphics, photos or other materials "
+              "These Terms of Use govern your use of WITH YOU,and any information, text, graphics, photos or other materials "
               "appearing on the NOTA app, referencing these Terms. you must read and,"
               " understand these terms.",
               style: TextStyle(
