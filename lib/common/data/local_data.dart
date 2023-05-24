@@ -24,7 +24,7 @@ const Map<String, dynamic> apiHomeLocalData = {
       "name": "sahar ahmed",
       "rate": 5,
       "address": "Saudi Arabia / Gada / St.123",
-      "price": 1000,
+      "price": 790,
       "age": 26,
       "language": Languages.Arabic,
       "gender": Gender.Female,
@@ -60,7 +60,7 @@ const Map<String, dynamic> apiHomeLocalData = {
     {
       "image":
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLLkdJph4fcGrcHobU_E0NRxA600mzn-2hnw&usqp=CAU",
-      "name": "Yaseer ",
+      "name": "Yasser",
       "rate": 1,
       "address": "Saudi Arabia / Gada / St.123",
       "price": 456,
@@ -74,9 +74,9 @@ const Map<String, dynamic> apiHomeLocalData = {
       "image":
       "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
       "name": "Anas Ahmed",
-      "rate": 2,
+      "rate": 5,
       "address": "Egypt / Cairo / St.255",
-      "price": 789,
+      "price": 1080,
       "age": 26,
       "language": Languages.English,
       "gender": Gender.Male,
@@ -112,7 +112,7 @@ const Map<String, dynamic> apiHomeLocalData = {
     {
       "image":
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9dcJbhAFcJIWpYRVvIXpARwI_c8tlisnI7A&usqp=CAU",
-      "name": "Maya mamdouh",
+      "name": "Mahiour Ahmed",
       "rate": 5,
       "address": "Egypt / Cairo / St.255",
       "price": 753,

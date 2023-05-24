@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:with_me/completed_req/completed_req.dart';
+import 'package:with_me/payment_page.dart';
 import '../common/color/app_color.dart';
 import '../common/custom_widgets/custom_button.dart';
 import '../common/custom_widgets/text_form_field.dart';
@@ -27,8 +28,7 @@ class _DetailsRequestState extends State<DetailsRequest> {
         centerTitle: true,
         backgroundColor: AppColors.secondaryColor,
       ),
-      body:
-      Padding(
+      body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: SingleChildScrollView(
           child: Column(
@@ -99,7 +99,7 @@ class _DetailsRequestState extends State<DetailsRequest> {
                 ),
                 CustomButton(
                   onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const CompletedRequest(),));
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const PaymentPage(),));
                    },
                   text: "Confirm Request",
                 ),
